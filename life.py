@@ -5,14 +5,14 @@ import time
 
 
 # constants
-FIELD_SIZE = 40
-ALIFE_CELL_CHAR = '#'
+FIELD_SIZE = 50
+ALIFE_CELL_CHAR = 'o'
 R_PENTHAMINO_COORDS = (
-        (12, 11),
-        (12, 12),
-        (13, 10),
-        (13, 11),
-        (14, 11)
+        (22, 21),
+        (22, 22),
+        (23, 20),
+        (23, 21),
+        (24, 21)
     )
 
 
@@ -75,7 +75,7 @@ class Field:
 
 def main():
     game = Field()
-    for _ in range(300):
+    for _ in range(1000):
         game.do_step()
         time.sleep(0.1)
         os.system('cls')
