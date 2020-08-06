@@ -3,6 +3,7 @@ import copy
 import os
 import time
 
+
 # constants
 FIELD_SIZE = 40
 ALIFE_CELL_CHAR = '#'
@@ -43,7 +44,6 @@ class Field:
 
         self.board = copy.deepcopy(self.cboard)
     
-    
     def __test_cell(self, i, j):
         alives = self.__count_alive_neighbors(i, j)
         if self.board[i][j] == ' ' and alives == 3:
@@ -73,8 +73,13 @@ class Field:
         return alives
 
 
-game = Field()
-for _ in range(300):
-    game.do_step()
-    time.sleep(0.1)
-    os.system('cls')
+def main():
+    game = Field()
+    for _ in range(300):
+        game.do_step()
+        time.sleep(0.1)
+        os.system('cls')
+
+
+if __name__ == '__main__':
+    main()
